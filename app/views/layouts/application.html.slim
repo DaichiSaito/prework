@@ -9,4 +9,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = display_meta_tags default_meta_tags
   body
+    = render 'shared/header'
+    = render 'hotels/average_price_modal'
+    = render 'shared/loading_modal'
     = yield
