@@ -6,7 +6,8 @@ class HotelsController < ApplicationController
 
   def get_average_price
     yad_id = params[:id]
-    plan_url_array = plans(yad_id: yad_id)
+    # クローリングに時間がかかりすぎるのでmax3件にした
+    plan_url_array = plans(yad_id: yad_id).slice(0, 3)
     total = 0
     plan_url_array.each do |plan_url|
       sleep 0.1
