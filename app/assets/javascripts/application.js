@@ -38,6 +38,7 @@ $(function() {
         }).fail(function (result) {
             // 失敗処理
             $('.loading-wrapper').hide()
+            alert("プランが一件もなかったり、.cal_pがなかったりするとエラーになる。エラー処理TODO")
             console.log("失敗")
         });
     })
