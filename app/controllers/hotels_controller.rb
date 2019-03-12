@@ -13,7 +13,7 @@ class HotelsController < ApplicationController
       total += avarage_price(plan_url: plan_url)
     end
     hotel = Hotel.find_by(hotel_id: params[:id])
-    render json: { hotel: hotel, average_price: total / plan_url_array.size }
+    render json: { hotel: hotel, average_price: ActionController::Base.helpers.number_to_currency(total / plan_url_array.size, unit: '¥', precision: 0) }
   end
 
   private
