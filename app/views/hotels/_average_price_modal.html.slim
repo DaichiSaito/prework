@@ -1,0 +1,22 @@
+/! Modal
+#exampleModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Modal title
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+      .modal-body
+        .media.mb-3
+          img.mr-3 alt="..." src="https://placehold.jp/150x150.png" id="hotel_image"
+          .media-body
+            h5.mt-0.mb-1
+              | ホテル名
+              span#hotel_name
+            p.mt-0.mb-1
+              | 平均価格
+              span#hotel_price
+
+      .modal-footer
+        button.btn.btn-secondary data-dismiss="modal" type="button"  Close
+        button.btn.btn-primary type="button"  Save changes

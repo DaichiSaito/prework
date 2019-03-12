@@ -1,0 +1,7 @@
+li.media.mb-3
+  = image_tag hotel.image_uri, class: 'mr-3'
+  .media-body
+    h5.mt-0.mb-1 = hotel.hotel_name
+    = hotel.hotel_caption
+    div
+      button.btn.btn-primary.js-getAveragePrice data-hotel_id="#{hotel.hotel_id}" 平均価格を見る
