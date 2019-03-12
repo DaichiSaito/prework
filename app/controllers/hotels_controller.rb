@@ -20,7 +20,7 @@ class HotelsController < ApplicationController
 
   def plans(yad_id: yad_id)
     base_url = 'https://www.jalan.net'
-    url = "#{ base_url }/#{ yad_id }/plan/?screenId=UWW3001&adultNumBkup=1&roomSingle=1&stayCount=1&yadNo=315514&roomTypeCd=0352264&roomCountBkup=1&dateUndecided=1&roomCount=1&roomCrackBkup=100000&roomCrack=100000&dateUndecidedBkup=1&adultNum=1&stayCountBkup=1&mealType=0&callbackHistFlg=1&smlCd=136202&distCd=01&ccnt=yads2"
+    url = "#{ base_url }/#{ yad_id }/plan/?adultNum=1&roomSingle=1&mealType=0"
     html = open(url)
     doc = Nokogiri::HTML.parse(html)
     plan_url_array = doc.css(".detailPlanName").map do |node|
